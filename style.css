@@ -17,6 +17,7 @@ body{
 .grid{
     height: 300px;
     width: 300px;
+    border: 2px solid grey;
 
     display: flex;
     flex-wrap: wrap;
@@ -25,4 +26,8 @@ body{
 
 .grid-box{
     background-color: grey;
+}
+
+.selected-button{
+    font-size: 12px;
 }
