@@ -30,15 +30,20 @@ controls.addEventListener('click', (e) =>{
     switch(button){
         case "edit":
            pixels = prompt("How many pixles do you want?(1 - 100)");
-           grid.replaceChildren();
-           pixelsize = 300/pixels;
-           for(let i = 1;i <= pixels**2;i++){
-                gridBox = document.createElement("div");
-                gridBox.classList.add('grid-box');
-                gridBox.style.backgroundColor = "white";
-                gridBox.style.height = pixelsize + "px";
-                gridBox.style.width = pixelsize + "px";
-                grid.appendChild(gridBox);
+           if (pixels > 100){
+             pixels = 100;
+           }
+           if (pixels > 0 && pixels <=100 ){
+             grid.replaceChildren();
+             pixelsize = 300/pixels;
+             for(let i = 1;i <= pixels**2;i++){
+                 gridBox = document.createElement("div");
+                 gridBox.classList.add('grid-box');
+                 gridBox.style.backgroundColor = "white";
+                 gridBox.style.height = pixelsize + "px";
+                 gridBox.style.width = pixelsize + "px";
+                 grid.appendChild(gridBox);
+                }
             }
            break;
         case "color":
